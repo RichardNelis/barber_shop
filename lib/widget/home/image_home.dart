@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
 class ImageHome extends StatelessWidget {
-  final size;
+  final Size size;
 
-  const ImageHome({Key? key, required this.size}) : super(key: key);
+  const ImageHome({
+    Key? key,
+    required this.size,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +16,7 @@ class ImageHome extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.black,
         image: DecorationImage(
-          image: AssetImage('assets/home_background.jpg'),
+          image: const AssetImage('assets/home_background.jpg'),
           fit: BoxFit.cover,
           colorFilter: ColorFilter.mode(
             Colors.black.withOpacity(0.3),
